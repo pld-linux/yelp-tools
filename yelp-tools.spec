@@ -1,10 +1,10 @@
 Summary:	Create, manage, and publish documentation for Yelp
 Name:		yelp-tools
-Version:	3.2.1
+Version:	3.3.4
 Release:	1
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp-tools/3.2/%{name}-%{version}.tar.xz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp-tools/3.3/%{name}-%{version}.tar.xz
 # Source0-md5:	b4517f31033080254ed4ac6cd77df51a
 URL:		http://projects.gnome.org/yelp/
 BuildRequires:	autoconf
@@ -14,6 +14,8 @@ BuildRequires:	libxml2-progs
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 BuildRequires:	yelp-xsl
+Requires:	libxml2-progs
+Requires:	libxslt-progs
 Requires:	yelp-xsl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -48,5 +50,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/yelp-build
 %attr(755,root,root) %{_bindir}/yelp-check
 %attr(755,root,root) %{_bindir}/yelp-new
-%{_datadir}/aclocal/yelp.m4
+%{_aclocaldir}/yelp.m4
 %{_datadir}/yelp-tools
