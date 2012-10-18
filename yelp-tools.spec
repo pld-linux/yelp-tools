@@ -1,4 +1,5 @@
-Summary:	Create, manage, and publish documentation for Yelp
+Summary:	Tools to create, manage, and publish documentation for Yelp
+Summary(pl.UTF-8):	Narzędzia do tworzenia, zarządzania i publikowania dokumentacji dla Yelpa
 Name:		yelp-tools
 Version:	3.6.1
 Release:	1
@@ -7,16 +8,17 @@ Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp-tools/3.6/%{name}-%{version}.tar.xz
 # Source0-md5:	54eaa5d7f7007253c403525fc924f5d2
 URL:		http://projects.gnome.org/yelp/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	itstool
-BuildRequires:	libxml2-progs
+BuildRequires:	libxml2-progs >= 1:2.6.12
 BuildRequires:	libxslt-progs >= 1.1.8
 BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 BuildRequires:	yelp-xsl
-Requires:	libxml2-progs
+Requires:	itstool
+Requires:	libxml2-progs >= 1:2.6.12
 Requires:	libxslt-progs >= 1.1.8
 Requires:	yelp-xsl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -26,6 +28,13 @@ yelp-tools is a collection of scripts and build utilities to help
 create, manage, and publish documentation for Yelp and the web. Most
 of the heavy lifting is done by packages like yelp-xsl and itstool.
 This package just wraps things up in a developer-friendly way.
+
+%description -l pl.UTF-8
+yelp-tools to zestaw skryptów i narzędzi do budowania, mających
+pomagać przy tworzeniu, zarządzaniu i publikowaniu dokumentacji dla
+Yelpa oraz na WWW. Większość pracy wykonywana jest przez pakiety
+takie jak yelp-xsl i itstool. Ten pakiet po prostu obudowuje je w
+sposób przyjazny dla programisty.
 
 %prep
 %setup -q
