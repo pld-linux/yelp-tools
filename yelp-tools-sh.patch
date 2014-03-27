@@ -1,0 +1,18 @@
+Avoid using last positional arguments in YELP_HELP_INIT without parameters.
+--- yelp-tools-3.12.0/tools/yelp.m4.orig	2014-02-02 20:28:10.000000000 +0100
++++ yelp-tools-3.12.0/tools/yelp.m4	2014-03-27 02:59:41.241812513 +0100
+@@ -8,12 +8,13 @@
+ YELP_LC_MEDIA_LINKS=true
+ YELP_LC_DIST=true
+ 
+-for yelpopt in [$1]; do
++for yelpopt in [$1] END; do
+   case $yelpopt in
+     lc-media-links)    YELP_LC_MEDIA_LINKS=true ;;
+     no-lc-media-links) YELP_LC_MEDIA_LINKS= ;;
+     lc-dist)           YELP_LC_DIST=true ;;
+     no-lc-dist)        YELP_LC_DIST= ;;
++    END) ;;
+     *) AC_MSG_ERROR([Unrecognized [YELP_HELP_INIT] option $yelpopt"]) ;;
+   esac
+ done;

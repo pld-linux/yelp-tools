@@ -2,11 +2,12 @@ Summary:	Tools to create, manage, and publish documentation for Yelp
 Summary(pl.UTF-8):	Narzędzia do tworzenia, zarządzania i publikowania dokumentacji dla Yelpa
 Name:		yelp-tools
 Version:	3.12.0
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp-tools/3.12/%{name}-%{version}.tar.xz
 # Source0-md5:	f65fc6f6b88387985f043d3f73a0e434
+Patch0:		%{name}-sh.patch
 URL:		http://projects.gnome.org/yelp/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
@@ -38,6 +39,7 @@ sposób przyjazny dla programisty.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
