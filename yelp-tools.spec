@@ -6,7 +6,7 @@ Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp-tools/3.18/%{name}-%{version}.tar.xz
-# Source0-md5:	2430db2d69241d217fe0af5c1458aa30
+# Source0-md5:	ceca436ff2ab3900dde718c0f0286f3f
 Patch0:		%{name}-sh.patch
 URL:		http://projects.gnome.org/yelp/
 BuildRequires:	autoconf >= 2.50
