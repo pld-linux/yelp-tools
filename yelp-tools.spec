@@ -8,7 +8,7 @@ Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp-tools/3.28/%{name}-%{version}.tar.xz
 # Source0-md5:	76907906611daae8f19a5276dd65f55d
 Patch0:		%{name}-sh.patch
-URL:		http://projects.gnome.org/yelp/
+URL:		https://wiki.gnome.org/Apps/Yelp
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	itstool
