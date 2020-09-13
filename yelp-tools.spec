@@ -1,12 +1,12 @@
 Summary:	Tools to create, manage, and publish documentation for Yelp
 Summary(pl.UTF-8):	Narzędzia do tworzenia, zarządzania i publikowania dokumentacji dla Yelpa
 Name:		yelp-tools
-Version:	3.32.2
+Version:	3.38.0
 Release:	1
-License:	GPL v2+
+License:	GPL v2+ with exceptions
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp-tools/3.32/%{name}-%{version}.tar.xz
-# Source0-md5:	7856f9ad0492aaf9adf097f5058bfc2e
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp-tools/3.38/%{name}-%{version}.tar.xz
+# Source0-md5:	44ed3d4824a0a96ef45a13a1c79850a1
 Patch0:		%{name}-sh.patch
 URL:		https://wiki.gnome.org/Apps/Yelp
 BuildRequires:	autoconf >= 2.50
@@ -21,7 +21,7 @@ BuildRequires:	yelp-xsl >= 3.18.0
 Requires:	itstool
 Requires:	libxml2-progs >= 1:2.6.12
 Requires:	libxslt-progs >= 1.1.8
-Requires:	yelp-xsl >= 3.18.0
+Requires:	yelp-xsl >= 3.38.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -59,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS COPYING ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/yelp-build
 %attr(755,root,root) %{_bindir}/yelp-check
 %attr(755,root,root) %{_bindir}/yelp-new
