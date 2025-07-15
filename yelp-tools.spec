@@ -46,15 +46,15 @@ sposób przyjazny dla programisty.
 %patch -P0 -p1
 
 %build
-%meson build \
+%meson \
 	-Dhelp=true
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 %find_lang %{name} --with-gnome
 
